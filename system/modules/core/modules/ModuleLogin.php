@@ -61,7 +61,7 @@ class ModuleLogin extends \Module
 		}
 
 		// Login
-		if (\Input::post('FORM_SUBMIT') == 'tl_login')
+		if (\Input::post('FORM_SUBMIT') == 'tl_login_' . $this->id)
 		{
 			// Check whether username and password are set
 			if (empty($_POST['username']) || empty($_POST['password']))
@@ -122,7 +122,7 @@ class ModuleLogin extends \Module
 		}
 
 		// Logout and redirect to the website root if the current page is protected
-		if (\Input::post('FORM_SUBMIT') == 'tl_logout')
+		if (\Input::post('FORM_SUBMIT') == 'tl_logout_' . $this->id)
 		{
 			global $objPage;
 

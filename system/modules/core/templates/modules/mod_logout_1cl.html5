@@ -8,7 +8,7 @@
 
   <form<?php if ($this->action): ?> action="<?php echo $this->action; ?>"<?php endif; ?> id="tl_logout" method="post">
     <div class="formbody">
-      <input type="hidden" name="FORM_SUBMIT" value="tl_logout">
+      <input type="hidden" name="FORM_SUBMIT" value="tl_logout_<?php echo $this->id; ?>">
       <input type="hidden" name="REQUEST_TOKEN" value="{{request_token}}">
       <p class="login_info"><?php echo $this->loggedInAs; ?><br><?php echo $this->lastLogin; ?></p>
       <div class="submit_container">
